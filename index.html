@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AIAWA English Star Academy</title>
+<style>
+:root{--navy:#10233f;--blue:#2563eb;--gold:#f4b942;--ink:#172033;--muted:#64748b;--bg:#f4f7fb;--card:#fff;--line:#e2e8f0}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,"Noto Sans Thai",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+header{background:linear-gradient(120deg,#10233f,#1d4e89);color:white;padding:20px max(20px,calc((100% - 1160px)/2));display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{font-weight:850;font-size:1.1rem}.brand span{color:#ffd166}nav{display:flex;gap:8px;flex-wrap:wrap}button,.btn{border:0;border-radius:10px;padding:10px 14px;cursor:pointer;font-weight:700;background:var(--blue);color:#fff}button.secondary{background:#e8eef8;color:#15345d}button.outline{background:transparent;border:1px solid #94a3b8;color:inherit}
+.wrap{max-width:1160px;margin:auto;padding:24px 18px}.hero{background:linear-gradient(130deg,#dceafe,#fff 60%,#fff2d1);border:1px solid #d7e4f7;border-radius:24px;padding:32px;display:grid;grid-template-columns:1.4fr .8fr;gap:24px;align-items:center}
+h1{font-size:clamp(2rem,4vw,3.4rem);line-height:1.12;margin:10px 0 14px;color:var(--navy)}h2{color:var(--navy);margin:0 0 14px}h3{margin:0 0 8px}.eyebrow{font-weight:800;color:#2458a6;text-transform:uppercase;letter-spacing:.08em;font-size:.8rem}.muted{color:var(--muted)}.hero-card{background:var(--navy);color:white;border-radius:20px;padding:24px}.hero-card .big{font-size:2.7rem;font-weight:900;color:#ffd166}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0}.grid.two{grid-template-columns:repeat(2,1fr)}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 5px 20px #0f172a08}.tier{display:flex;justify-content:space-between;align-items:center;gap:8px}.pill{font-size:.75rem;font-weight:800;background:#e7efff;color:#214e9a;padding:5px 9px;border-radius:999px}.price{font-size:1.8rem;font-weight:900;color:var(--navy)}.lesson{border-left:4px solid var(--gold)}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.field{display:grid;gap:6px;margin:10px 0}input,select,textarea{width:100%;padding:11px 12px;border:1px solid #cbd5e1;border-radius:10px;font:inherit;background:#fff}label{font-weight:700;font-size:.9rem}.notice{background:#fff7df;border:1px solid #f3d27c;padding:12px;border-radius:12px;color:#674b0c}.success{background:#e8f8ef;border:1px solid #a7dfba;color:#166534;padding:12px;border-radius:12px}.hidden{display:none!important}.progress{height:9px;border-radius:99px;background:#e2e8f0;overflow:hidden}.progress span{display:block;height:100%;background:#2563eb;width:32%}footer{background:#10233f;color:#cbd5e1;padding:24px;text-align:center;margin-top:30px;font-size:.9rem}.tab{display:none}.tab.active{display:block}.small{font-size:.86rem}.kpi{font-size:1.7rem;font-weight:900;color:var(--navy)}.admin-label{font-size:.72rem;color:#9a6700;background:#fff2c7;padding:4px 8px;border-radius:6px}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding:23px}.grid,.grid.two{grid-template-columns:1fr}.wrap{padding:18px 12px}header{padding:18px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="brand">✦ AIAWA <span>English Star Academy</span></div>
+ <nav><button class="secondary" onclick="showTab('home')">หน้าแรก</button><button class="secondary" onclick="showTab('courses')">หลักสูตร</button><button class="secondary" onclick="showTab('membership')">สมาชิก</button><button class="secondary" onclick="showTab('referral')">แนะนำเพื่อน</button><button onclick="showTab('account')">เข้าสู่ระบบ / สมัคร</button></nav>
+</header>
+<main class="wrap">
+<section id="home" class="tab active">
+ <div class="hero">
+  <div><div class="eyebrow">Learn English. Grow Your Future.</div><h1>เปลี่ยนภาษาอังกฤษ<br>ให้เป็นโอกาสของคุณ</h1>
+  <p>เรียนภาษาอังกฤษด้วยตนเอง ตั้งแต่พื้นฐานในชีวิตประจำวัน ไปจนถึงการสื่อสารทางธุรกิจและระดับมืออาชีพ พร้อมคำอธิบายภาษาไทย</p>
+  <div class="row"><button onclick="showTab('courses')">เริ่มสำรวจบทเรียน →</button><button class="secondary" onclick="showTab('membership')">ดูระดับสมาชิก</button></div>
+  <p class="muted small">ตัวอย่างต้นแบบ MVP • ข้อมูลและธุรกรรมยังไม่เชื่อมต่อระบบจริง</p></div>
+  <div class="hero-card"><div class="pill">เริ่มต้นเรียนรู้</div><div class="big">$1</div><h3>Star 1 Membership</h3><p>พื้นฐานภาษาอังกฤษ คำศัพท์ ไวยากรณ์ และประโยคที่ใช้ได้จริง</p><button style="background:#ffd166;color:#10233f" onclick="showTab('membership')">เลือกสมาชิก</button></div>
+ </div>
+ <div class="grid">
+  <div class="card"><div class="eyebrow">01 / Learn</div><h3>เรียนเป็นขั้นตอน</h3><p class="muted">บทเรียนสั้น ๆ พร้อมตัวอย่างภาษาอังกฤษและคำแปลไทย</p></div>
+  <div class="card"><div class="eyebrow">02 / Practice</div><h3>ฝึกใช้ในสถานการณ์จริง</h3><p class="muted">บทสนทนาประจำวัน การประชุม อีเมล และการนำเสนอ</p></div>
+  <div class="card"><div class="eyebrow">03 / Progress</div><h3>ติดตามความก้าวหน้า</h3><p class="muted">วางแผนการเรียนและทำแบบทดสอบในแต่ละระดับ</p></div>
+ </div>
+</section>
+<section id="courses" class="tab">
+ <div class="row" style="justify-content:space-between"><div><div class="eyebrow">Learning library</div><h2>หลักสูตรและบทเรียน</h2></div><span class="admin-label">เนื้อหาตัวอย่าง</span></div>
+ <div class="grid">
+  <article class="card lesson"><span class="pill">Star 1 · Beginner</span><h3 style="margin-top:12px">Introducing Yourself</h3><p><b>English:</b> Hello, my name is Anna. Nice to meet you.</p><p><b>ไทย:</b> สวัสดี ฉันชื่อแอนนา ยินดีที่ได้รู้จัก</p><button class="secondary" onclick="openLesson('intro')">เปิดบทเรียน</button></article>
+  <article class="card lesson"><span class="pill">Star 2 · Daily Life</span><h3 style="margin-top:12px">At a Restaurant</h3><p><b>English:</b> Could I see the menu, please?</p><p><b>ไทย:</b> ขอเมนูหน่อยได้ไหมครับ/คะ</p><button class="secondary" onclick="openLesson('restaurant')">เปิดบทเรียน</button></article>
+  <article class="card lesson"><span class="pill">Star 3 · Business</span><h3 style="margin-top:12px">Scheduling a Meeting</h3><p><b>English:</b> Are you available for a meeting tomorrow?</p><p><b>ไทย:</b> พรุ่งนี้คุณสะดวกประชุมไหม</p><button class="secondary" onclick="openLesson('meeting')">เปิดบทเรียน</button></article>
+  <article class="card lesson"><span class="pill">Star 4 · Advanced</span><h3 style="margin-top:12px">Presenting a Proposal</h3><p><b>English:</b> Let me walk you through our proposal.</p><p><b>ไทย:</b> ขออธิบายข้อเสนอของเราให้คุณฟัง</p><button class="secondary" onclick="openLesson('proposal')">เปิดบทเรียน</button></article>
+  <article class="card lesson"><span class="pill">Star 5 · Professional</span><h3 style="margin-top:12px">Negotiation Skills</h3><p><b>English:</b> Is there any flexibility on the delivery date?</p><p><b>ไทย:</b> สามารถปรับเปลี่ยนกำหนดส่งมอบได้หรือไม่</p><button class="secondary" onclick="openLesson('negotiation')">เปิดบทเรียน</button></article>
+  <article class="card"><span class="pill">Practice</span><h3 style="margin-top:12px">Quick Check</h3><p>“Could you repeat that, please?” หมายถึงอะไร</p><select id="quiz"><option value="">เลือกคำตอบ</option><option value="a">ช่วยพูดซ้ำอีกครั้งได้ไหม</option><option value="b">ฉันเห็นด้วย</option><option value="c">แล้วพบกันใหม่</option></select><button style="margin-top:10px" onclick="checkQuiz()">ตรวจคำตอบ</button><p id="quizResult" class="small"></p></article>
+ </div>
+ <div id="lessonPanel" class="card hidden"><button class="secondary" onclick="document.getElementById('lessonPanel').classList.add('hidden')">ปิด</button><div id="lessonContent"></div></div>
+</section>
+<section id="membership" class="tab">
+ <div class="eyebrow">Membership plans</div><h2>เลือกระดับการเรียนรู้</h2><p class="muted">ราคาและเงื่อนไขต่อไปนี้เป็นข้อมูลตัวอย่างสำหรับต้นแบบ ต้องยืนยันราคาและเงื่อนไขก่อนเปิดขายจริง</p>
+ <div class="grid">
+  <div class="card"><div class="tier"><h3>⭐ Star 1</h3><span class="pill">Beginner</span></div><div class="price">$1 <small>/ เดือน</small></div><p>พื้นฐาน คำศัพท์ ไวยากรณ์ และประโยคเริ่มต้น</p><button onclick="choosePlan('Star 1','$1')">เลือกแผนนี้</button></div>
+  <div class="card"><div class="tier"><h3>⭐⭐ Star 2</h3><span class="pill">Daily Life</span></div><div class="price">$3 <small>/ เดือน</small></div><p>ทุกอย่างใน Star 1 และบทสนทนาในชีวิตประจำวัน</p><button onclick="choosePlan('Star 2','$3')">เลือกแผนนี้</button></div>
+  <div class="card"><div class="tier"><h3>⭐⭐⭐ Star 3</h3><span class="pill">Business</span></div><div class="price">$5 <small>/ เดือน</small></div><p>ทุกอย่างใน Star 1–2 และภาษาอังกฤษสำหรับธุรกิจ</p><button onclick="choosePlan('Star 3','$5')">เลือกแผนนี้</button></div>
+  <div class="card"><div class="tier"><h3>⭐⭐⭐⭐ Star 4</h3><span class="pill">Advanced</span></div><div class="price">$8 <small>/ เดือน</small></div><p>การประชุม การนำเสนอ การเจรจา และการสื่อสารขั้นสูง</p><button onclick="choosePlan('Star 4','$8')">เลือกแผนนี้</button></div>
+  <div class="card"><div class="tier"><h3>⭐⭐⭐⭐⭐ Star 5</h3><span class="pill">Professional</span></div><div class="price">$12 <small>/ เดือน</small></div><p>ทุกหลักสูตร พร้อมแดชบอร์ดแนะนำสมาชิกและการขอรับรางวัล</p><button onclick="choosePlan('Star 5','$12')">เลือกแผนนี้</button></div>
+  <div class="card"><h3>ชำระเงินแบบ Manual</h3><p class="muted">ต้นแบบนี้ไม่รับเงินจริงและไม่มีการตรวจสอบธุรกรรมอัตโนมัติ</p><div class="notice">ก่อนเปิดใช้จริง ต้องแสดง QR/ข้อมูลร้านค้าที่ถูกต้องและตรวจสอบยอดเงินจากบัญชีผู้รับเงิน ห้ามเชื่อถือสลิปเพียงอย่างเดียว</div></div>
+ </div>
+ <div id="paymentPanel" class="card hidden"><h3>คำขอสมัครสมาชิก</h3><p id="selectedPlan"></p><div class="field"><label>ชื่อผู้ชำระเงิน</label><input id="payer" placeholder="ชื่อ-นามสกุล"></div><div class="field"><label>หมายเหตุ / เลขอ้างอิง (ถ้ามี)</label><input id="paymentRef" placeholder="กรอกเลขอ้างอิงธุรกรรม ไม่กรอก PIN หรือ OTP"></div><button onclick="submitDemoPayment()">ส่งคำขอ (Demo)</button><p id="paymentResult" class="small"></p></div>
+</section>
+<section id="referral" class="tab">
+ <div class="eyebrow">Referral rewards</div><h2>แนะนำเพื่อน เรียนรู้ไปด้วยกัน</h2>
+ <div class="notice">เงื่อนไขจำลอง: รางวัล $5 ต่อผู้สมัครที่ผ่านการตรวจสอบ และโบนัสรวมเมื่อครบ 10 คน = $80 ทั้งหมด (ไม่ใช่ $80 เพิ่มเติม) การจ่ายเงินจริงยังไม่เปิดใช้งาน</div>
+ <div class="grid two">
+  <div class="card"><h3>แดชบอร์ดตัวอย่าง</h3><div class="kpi">3 / 10 คน</div><div class="progress"><span style="width:30%"></span></div><p class="muted">ยอดรางวัลโดยประมาณเมื่อครบเงื่อนไข: $15 ก่อนถึงโบนัส</p><p>Referral Code: <b>AIAWA-DEMO-4821</b></p><button onclick="copyReferral()">คัดลอกลิงก์แนะนำ</button><p id="copyResult" class="small"></p></div>
+  <div class="card"><h3>การผูก TrueMoney Wallet</h3><p>สำหรับ Star 5: ระบบจริงควรตรวจสอบการเป็นเจ้าของบัญชีผ่านวิธีที่ผู้ให้บริการอนุมัติ</p><div class="field"><label>หมายเลขวอลเล็ต (Demo เท่านั้น)</label><input id="wallet" placeholder="ไม่ต้องกรอกข้อมูลจริงในต้นแบบ"></div><button class="secondary" onclick="walletDemo()">บันทึกสถานะตัวอย่าง</button><p id="walletResult" class="small"></p></div>
+ </div>
+ <div class="card"><h3>เงื่อนไขที่ระบบจริงต้องบังคับใช้</h3><ul><li>สมาชิกใหม่ต้องยืนยันอีเมลหรือโทรศัพท์</li><li>ห้ามแนะนำตัวเองหรือใช้บัญชีซ้ำ</li><li>ต้องกำหนดว่าผู้สมัครต้องชำระเงินหรือไม่จึงนับเป็นผู้แนะนำสำเร็จ</li><li>รางวัลเริ่มจากสถานะรอตรวจสอบ และต้องมีผู้อนุมัติก่อนจ่าย</li><li>โบนัส $80 เป็นยอดรวมเมื่อครบ 10 คน ตามตัวเลือกของโครงการนี้</li></ul></div>
+</section>
+<section id="account" class="tab">
+ <div class="eyebrow">Account access</div><h2>เข้าสู่ระบบ / สมัครสมาชิก</h2>
+ <div class="grid two"><div class="card"><h3>เข้าสู่ระบบ</h3><div class="field"><label>อีเมล</label><input id="loginEmail" type="email" placeholder="you@example.com"></div><div class="field"><label>รหัสผ่าน</label><input id="loginPass" type="password" placeholder="รหัสผ่าน"></div><button onclick="demoLogin()">เข้าสู่ระบบ (Demo)</button><p id="loginResult" class="small"></p></div>
+ <div class="card"><h3>สร้างบัญชีใหม่</h3><div class="field"><label>ชื่อที่แสดง</label><input id="newName" placeholder="ชื่อของคุณ"></div><div class="field"><label>อีเมล</label><input id="newEmail" type="email" placeholder="you@example.com"></div><div class="field"><label>รหัสแนะนำ (ถ้ามี)</label><input id="newReferral" placeholder="Referral Code"></div><button onclick="demoSignup()">สมัครสมาชิก (Demo)</button><p id="signupResult" class="small"></p></div></div>
+ <div class="notice">ข้อจำกัด: การเข้าสู่ระบบและสมัครสมาชิกในไฟล์นี้เป็นเพียงการจำลองหน้าจอ ไม่มีฐานข้อมูล ไม่มีการยืนยันตัวตนจริง และไม่ควรใช้รหัสผ่านจริง</div>
+</section>
+<section id="admin" class="tab">
+ <div class="eyebrow">Admin preview</div><h2>แผงควบคุมผู้ดูแล</h2><div class="notice">หน้านี้เป็นภาพตัวอย่างเท่านั้น ยังไม่มีการควบคุมสิทธิ์ฝั่งเซิร์ฟเวอร์</div>
+ <div class="grid"><div class="card"><p class="muted">สมาชิกทั้งหมด</p><div class="kpi">128</div></div><div class="card"><p class="muted">รอตรวจสอบชำระเงิน</p><div class="kpi">7</div></div><div class="card"><p class="muted">รางวัลรออนุมัติ</p><div class="kpi">$240</div></div></div>
+ <div class="card"><h3>รายการชำระเงินตัวอย่าง</h3><p>ต้องพัฒนาหน้ารายการจริงพร้อมสถานะ Pending / Verified / Rejected และ audit log</p></div>
+</section>
+</main>
+<footer>© AIAWA English Star Academy · MVP prototype · Thai / English</footer>
+<script>
+const lessons={
+intro:['Introducing Yourself','Hello, my name is Anna. Nice to meet you.','สวัสดี ฉันชื่อแอนนา ยินดีที่ได้รู้จัก','ฝึกพูดชื่อของคุณและถามชื่ออีกฝ่าย: What is your name?'],
+restaurant:['At a Restaurant','Could I see the menu, please?','ขอเมนูหน่อยได้ไหมครับ/คะ','คำว่า Could I…? เป็นวิธีสุภาพในการขอสิ่งต่าง ๆ'],
+meeting:['Scheduling a Meeting','Are you available for a meeting tomorrow?','พรุ่งนี้คุณสะดวกประชุมไหม','Are you available…? ใช้สอบถามความสะดวกของอีกฝ่าย'],
+proposal:['Presenting a Proposal','Let me walk you through our proposal.','ขออธิบายข้อเสนอของเราให้คุณฟัง','walk you through หมายถึงอธิบายเป็นลำดับขั้น'],
+negotiation:['Negotiation Skills','Is there any flexibility on the delivery date?','สามารถปรับเปลี่ยนกำหนดส่งมอบได้หรือไม่','flexibility ใช้พูดถึงความยืดหยุ่นในการเจรจา']
+};
+function showTab(id){document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
+function openLesson(id){let l=lessons[id];document.getElementById('lessonContent').innerHTML='<h3>'+l[0]+'</h3><p><b>English:</b> '+l[1]+'</p><p><b>ภาษาไทย:</b> '+l[2]+'</p><div class="notice">'+l[3]+'</div>';document.getElementById('lessonPanel').classList.remove('hidden');document.getElementById('lessonPanel').scrollIntoView({behavior:'smooth'})}
+function checkQuiz(){let v=document.getElementById('quiz').value;document.getElementById('quizResult').textContent=v==='a'?'ถูกต้อง! Well done.':v?'ยังไม่ถูก ลองอีกครั้ง':'กรุณาเลือกคำตอบ';}
+let selected='';
+function choosePlan(plan,price){selected=plan+' — '+price;document.getElementById('selectedPlan').textContent='แผนที่เลือก: '+selected;document.getElementById('paymentPanel').classList.remove('hidden');document.getElementById('paymentPanel').scrollIntoView({behavior:'smooth'})}
+function submitDemoPayment(){let p=document.getElementById('payer').value.trim();if(!selected||!p){document.getElementById('paymentResult').textContent='กรุณาเลือกแผนและกรอกชื่อผู้ชำระเงิน';return}document.getElementById('paymentResult').textContent='บันทึกคำขอจำลองแล้ว (Demo) — ยังไม่มีการรับเงินหรือเปิดสิทธิ์สมาชิกจริง'}
+function copyReferral(){let s=location.href.split('#')[0]+'?ref=AIAWA-DEMO-4821';if(navigator.clipboard){navigator.clipboard.writeText(s).then(()=>document.getElementById('copyResult').textContent='คัดลอกลิงก์ตัวอย่างแล้ว').catch(()=>document.getElementById('copyResult').textContent=s)}else document.getElementById('copyResult').textContent=s}
+function walletDemo(){document.getElementById('walletResult').textContent='สถานะจำลอง: Pending Verification — อย่ากรอกข้อมูลวอลเล็ตจริงในไฟล์ต้นแบบ'}
+function demoLogin(){document.getElementById('loginResult').textContent='Demo เท่านั้น: ระบบยังไม่ตรวจสอบบัญชีหรือรหัสผ่าน'}
+function demoSignup(){let n=document.getElementById('newName').value.trim(),e=document.getElementById('newEmail').value.trim();document.getElementById('signupResult').textContent=n&&e?'สมัครสมาชิกจำลองสำเร็จ (Demo) — ยังไม่ได้สร้างบัญชีจริง':'กรุณากรอกชื่อและอีเมล'}
+</script>
+</body></html>
